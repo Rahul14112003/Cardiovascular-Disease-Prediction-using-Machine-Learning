@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARDIOVASCULAR DISEASE PREDICTION</title>
+    <style>
+        body {
+            background-image: url('static/r7.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: #FFD700; /* Yellow color */
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease;
+        }
+
+        input[type="text"] {
+            width: calc(50% - 22px);
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #3E2960;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:hover,
+        input[type="text"]:focus {
+            background-color: #f1f1f1;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #9B59B6;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8E44AD;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.8);
+        }
+
+        .team-members {
+            margin-top: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-member {
+            margin: 5px;
+            font-family: 'Arial', sans-serif;
+            color: #FF0000; /* Red color */
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .team-member:not(:last-child) {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CARDIOVASCULAR DISEASE PREDICTION USING MACHINE LEARNING (GROUP 15)</h1>
+        <form method="POST" action="{{url_for('home')}}">
+            <input type="text" name="age" placeholder="Enter Age">
+            <input type="text" name="sex" placeholder="Enter Sex">
+            <input type="text" name="cp" placeholder="Enter Chest Pain Type">
+            <input type="text" name="trestbps" placeholder="Enter Resting Blood Pressure">
+            <input type="text" name="chol" placeholder="Enter Serum Cholesterol">
+            <input type="text" name="fbs" placeholder="Enter Fasting Blood Sugar">
+            <input type="text" name="restecg" placeholder="Enter Resting Electrocardiographic Results">
+            <input type="text" name="thalach" placeholder="Enter Maximum Heart Rate Achieved">
+            <input type="text" name="exang" placeholder="Enter Exercise Induced Angina">
+            <input type="text" name="oldpeak" placeholder="Enter Oldpeak">
+            <input type="text" name="slope" placeholder="Enter Slope">
+            <input type="text" name="ca" placeholder="Enter Number of Major Vessels Colored by Fluoroscopy">
+            <input type="text" name="thal" placeholder="Enter Thalassemia">
+            <input type="submit" value="Predict">
+        </form>
+        <img src="static\robot.jpg" alt="A&R">
+        <div class="team-members">
+            <span class="team-member">Rahul Suryawanshi</span>
+            <span class="team-member">|</span>
+            <span class="team-member">Jeetu Sirvi</span>
+            <span class="team-member">|</span>
+            <span class="team-member">Shaunak Pillay</span>
+            <span class="team-member">|</span>
+            <span class="team-member">Siddhesh Jaju</span>
+        </div>
+    </div>
+</body>
+
+</html>

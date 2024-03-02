@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        center {
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ecf0f1;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 50%; /* Set the maximum width to 50% */
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            color: #ecf0f1;
+            font-size: 1.5em;
+            line-height: 1.4;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+
+        <h1>PREDICTION:</h1>
+
+        {% if data == 0 %}
+        <h1>You are healthy!!</h1>
+        <img src='static/r1.jpg' alt='Healthy Image'>
+        {% else %}
+        <h1>You may need to be diagnosed</h1>
+        <img src='static/r2.jpg' alt='Not Healthy Image'>
+        <p>{{ explanation }}</p>
+        {% endif %}
+
+        <br><br>
+        <a href='/'>Go back to home page</a>
+
+    </center>
+
+</body>
+
+</html>

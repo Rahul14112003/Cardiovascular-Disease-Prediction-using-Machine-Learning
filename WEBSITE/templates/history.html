@@ -1,0 +1,6 @@
+@app.route('/history')
+@login_required
+def history():
+    # Fetch and pass user's history to the template
+    user_history = get_user_history(current_user.id)  # Implement this function to fetch the user's history
+    return render_template('history.html', history=user_history)
